@@ -1,5 +1,5 @@
 import { type AppType } from "next/dist/shared/lib/utils";
-import DevViewport from "../common/components/DevViewport";
+import DevViewport from "../module/common/DevViewport";
 import { ThemeProvider } from "next-themes";
 import "../styles/globals.css";
 

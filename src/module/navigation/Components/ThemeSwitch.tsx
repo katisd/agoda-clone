@@ -3,9 +3,13 @@ import React, { useEffect, useState } from "react";
 
 interface ThemeSwitchProps {
   size?: "sm" | "md" | "lg" | "xl";
+  config?: string;
 }
 
-const ThemeSwitch: React.FC<ThemeSwitchProps> = ({ size = "md" }) => {
+const ThemeSwitch: React.FC<ThemeSwitchProps> = ({
+  size = "md",
+  config = "",
+}) => {
   const { theme, setTheme } = useTheme();
   const sizeMap = {
     sm: "6",
@@ -31,7 +35,7 @@ const ThemeSwitch: React.FC<ThemeSwitchProps> = ({ size = "md" }) => {
   };
   return (
     <>
-      <label className="swap-rotate swap btn-ghost btn-circle btn">
+      <label className={`swap-rotate swap btn-ghost btn-circle btn ${config}`}>
         <input
           aria-label="Toggle Dark Mode"
           type="checkbox"
@@ -40,7 +44,7 @@ const ThemeSwitch: React.FC<ThemeSwitchProps> = ({ size = "md" }) => {
         />
 
         <svg
-          className={`swap-on h-${computedSize} w-${computedSize} fill-current`}
+          className={`swap-on h-${computedSize} w-${computedSize} ${config} fill-current`}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
