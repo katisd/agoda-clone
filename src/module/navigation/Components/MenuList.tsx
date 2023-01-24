@@ -1,13 +1,4 @@
-const menuList: string[] = [
-  "Flight+Hotel",
-  "Hotels&Home",
-  "Flight",
-  "Coupon&Deal",
-  "Apartments",
-  "Activities",
-  "Airport Transfer",
-  "Car Rental",
-];
+import { menuList } from "../../assets/staticObject";
 
 function MenuList({ nMenu = 2 }: { nMenu?: number }) {
   return (
