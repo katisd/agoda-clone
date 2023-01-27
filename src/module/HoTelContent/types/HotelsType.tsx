@@ -8,6 +8,7 @@ export type Hotel = {
   benefits?: string[];
   comments?: string[];
   star: number;
+  pictureLink?: string;
 };
 
 export type HotelList = {
