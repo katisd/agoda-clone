@@ -10,21 +10,36 @@ import type { FilterValueType } from "./_app";
 import Sort from "../module/Search/components/Sort";
 import { SortFunction } from "../module/Search/utils/SortFunction";
 import Filters from "../module/Search/components/Filters";
+import { clientEnv } from "../env/schema.mjs";
 
 const Home: NextPage = () => {
   useEffect(() => {
     setLoading(true);
-    axios
-      .get<HotelList>("/api/hotels")
-      .then((res) => res.data)
-      .then((data) => {
-        setData(data);
-        setLoading(false);
-      })
-      .catch(() => {
-        setError(true);
-        setLoading(false);
-      });
+    clientEnv.NEXT_PUBLIC_API_ENDPOINT
+      ? // if provide NEXT_PUBLIC_API_ENDPOINT
+        axios
+          .get<HotelList>(clientEnv.NEXT_PUBLIC_API_ENDPOINT)
+          .then((res) => res.data)
+          .then((data) => {
+            setData(data);
+            setLoading(false);
+          })
+          .catch(() => {
+            setError(true);
+            setLoading(false);
+          })
+      : // if not provide NEXT_PUBLIC_API_ENDPOINT use api/hotels
+        axios
+          .get<HotelList>("/api/hotels")
+          .then((res) => res.data)
+          .then((data) => {
+            setData(data);
+            setLoading(false);
+          })
+          .catch(() => {
+            setError(true);
+            setLoading(false);
+          });
   }, []);
   const [data, setData] = useState<HotelList | null>(null);
   // TODO: add loading(skeleton) and error page
