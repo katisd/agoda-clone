@@ -1,10 +1,11 @@
 import React from "react";
 import { useFormContext } from "react-hook-form";
+import { FilterValueType } from "../../../pages/_app";
 import { type FilterProps } from "../types/FilterType";
 
 // return checkbox choices
 const SubFilter: React.FC<FilterProps> = ({ choices, nameOfFilter }) => {
-  const { register } = useFormContext();
+  const { register } = useFormContext<FilterValueType>();
   return (
     <>
       {choices?.map((choice) => (
