@@ -1,0 +1,317 @@
+{
+  "hotels": [
+    {
+      "name": "The Grand Hotel",
+      "property_type": "Hotel",
+      "location": "New York",
+      "rating": 4.5,
+      "star": 5,
+      "price": 250,
+      "sale_price": 200,
+      "benefits": ["Free Wi-Fi", "Free Breakfast", "Fitness Center"],
+      "comments": [
+        "Beautiful hotel with great service and amenities.",
+        "Highly recommend!",
+        "Amazing view from the room.",
+        "Great location."
+      ]
+    },
+    {
+      "name": "The Plaza Hotel",
+      "property_type": "Hotel",
+      "location": "Loas Angeles",
+      "rating": 4.0,
+      "star": 4,
+      "price": 300,
+      "benefits": ["Free Wi-Fi", "Fitness Center", "Pool"],
+      "comments": [
+        "A bit pricey but worth it for the location and historic charm.",
+        "Great staff and service.",
+        "The room was a bit small."
+      ]
+    },
+    {
+      "name": "The Ritz Carlton",
+      "property_type": "Hotel",
+      "location": "Chicago",
+      "rating": 5.0,
+      "star": 5,
+      "price": 500,
+      "sale_price": 450,
+      "benefits": [
+        "Free Wi-Fi",
+        "Free Breakfast",
+        "Fitness Center",
+        "Pool",
+        "Spa"
+      ],
+      "comments": [
+        "Absolutely luxurious hotel with top-notch service and amenities.",
+        "The spa is amazing!",
+        "Great location and view."
+      ]
+    },
+    {
+      "name": "The Waldorf Astoria",
+      "property_type": "Hotel",
+      "location": "Miami",
+      "rating": 4.5,
+      "star": 5,
+      "price": 400,
+      "sale_price": 350,
+      "benefits": ["Free Wi-Fi", "Free Breakfast", "Fitness Center", "Pool"],
+      "comments": [
+        "Stunning hotel with impeccable service and a great spa.",
+        "Great amenities and service.",
+        "The room was a bit small."
+      ]
+    },
+    {
+      "name": "The Four Seasons Hotel",
+      "property_type": "Hotel",
+      "location": "Las Vegas",
+      "rating": 4.7,
+      "star": 3,
+      "price": 350,
+      "sale_price": 300,
+      "benefits": ["Free Wi-Fi", "Free Breakfast", "Fitness Center", "Pool"],
+      "comments": [
+        "Excellent hotel with great service and amenities.",
+        "Highly recommend!",
+        "Great location and view."
+      ]
+    },
+    {
+      "name": "Mock Up Hotel",
+      "property_type": "Hotel",
+      "location": "New York",
+      "rating": 4.5,
+      "star": 4,
+      "comments": [
+        "Fantastic hotel with great service.",
+        "Clean and spacious rooms.",
+        "Excellent location."
+      ],
+      "benefits": [
+        "Free Wi-Fi",
+        "On-site restaurant",
+        "Fitness center",
+        "Business center"
+      ],
+      "price": 200,
+      "sale_price": 180
+    },
+    {
+      "name": "Mock Up Resort",
+      "property_type": "Resort",
+      "location": "Los Angeles",
+      "rating": 4.0,
+      "star": 3,
+      "comments": [
+        "Beautiful resort with great amenities.",
+        "Friendly staff and great service.",
+        "Wonderful location near the beach."
+      ],
+      "benefits": [
+        "Free Wi-Fi",
+        "Spa and fitness center",
+        "On-site restaurant",
+        "Shuttle service to nearby attractions"
+      ],
+      "price": 350
+    },
+    {
+      "name": "Mock Up Inn",
+      "property_type": "Inn",
+      "location": "Chicago",
+      "rating": 3.5,
+      "star": 2,
+      "comments": [
+        "Charming inn with great character.",
+        "Friendly staff and comfortable rooms.",
+        "Great location in the city."
+      ],
+      "benefits": [
+        "Free Wi-Fi",
+        "Continental breakfast",
+        "Bicycles available for rent"
+      ],
+      "price": 150
+    },
+    {
+      "name": "Mock Up Luxury Hotel",
+      "property_type": "Luxury Hotel",
+      "location": "Miami",
+      "rating": 5.0,
+      "star": 5,
+      "comments": [
+        "Exceptional luxury hotel with top-notch service.",
+        "Beautiful rooms and gorgeous common areas.",
+        "Fantastic location in the heart of the city."
+      ],
+      "benefits": [
+        "Free Wi-Fi",
+        "On-site spa and fitness center",
+        "Room service",
+        "Valet parking"
+      ],
+      "price": 450,
+      "sale_price": 425
+    },
+
+    {
+      "name": "Mock Up Boutique Hotel",
+      "property_type": "Boutique Hotel",
+      "location": "Las Vegas",
+      "rating": 4.0,
+      "star": 3,
+      "comments": [
+        "Charming boutique hotel with unique character.",
+        "Friendly staff and well-appointed rooms.",
+        "Great location in a trendy neighborhood."
+      ],
+      "benefits": [
+        "Free Wi-Fi",
+        "On-site bar and restaurant",
+        "Pet-friendly",
+        "24-hour front desk service"
+      ],
+      "price": 250
+    },
+    {
+      "name": "Mock Up Budget Hotel",
+      "property_type": "Budget Hotel",
+      "location": "San Francisco",
+      "rating": 3.0,
+      "star": 2,
+      "comments": [
+        "Affordable budget hotel with basic amenities.",
+        "Clean and comfortable rooms.",
+        "Convenient location near public transportation."
+      ],
+      "benefits": [
+        "Free Wi-Fi",
+        "24-hour front desk service",
+        "Continental breakfast"
+      ],
+      "price": 100
+    },
+    {
+      "name": "Mock Up Family Hotel",
+      "property_type": "Family Hotel",
+      "location": "Seattle",
+      "rating": 4.5,
+      "star": 4,
+      "comments": [
+        "Great hotel for families with kids.",
+        "Spacious rooms and plenty of activities.",
+        "Friendly staff and great service."
+      ],
+      "benefits": [
+        "Free Wi-Fi",
+        "On-site pool and playground",
+        "Family-friendly activities and entertainment",
+        "Babysitting service available"
+      ],
+      "price": 250,
+      "sale_price": 225
+    },
+    {
+      "name": "Mock Up Business Hotel",
+      "property_type": "Business Hotel",
+      "location": "Boston",
+      "rating": 4.0,
+      "star": 3,
+      "comments": [
+        "Great hotel for business travelers.",
+        "Well-appointed rooms and great amenities.",
+        "Convenient location near business district."
+      ],
+      "benefits": [
+        "Free Wi-Fi",
+        "Business center with meeting rooms",
+        "On-site restaurant and bar",
+        "24-hour front desk service"
+      ],
+      "price": 300
+    },
+    {
+      "name": "Mock Up Beach Hotel",
+      "property_type": "Beach Hotel",
+      "location": "Los Angeles",
+      "rating": 4.5,
+      "star": 4,
+      "comments": [
+        "Beautiful hotel with great beach access.",
+        "Spacious rooms and great service.",
+        "Fantastic location on the beach."
+      ],
+      "benefits": [
+        "Free Wi-Fi",
+        "Beach chairs and umbrellas available",
+        "On-site restaurant and bar",
+        "Water sports equipment rental"
+      ],
+      "price": 350,
+      "sale_price": 325
+    },
+    {
+      "name": "Mock Up Countryside Hotel",
+      "property_type": "Countryside Hotel",
+      "location": "Los Angeles",
+      "rating": 4.0,
+      "star": 3,
+      "comments": [
+        "Beautiful hotel in the countryside",
+        "Spacious rooms and great service",
+        "Fantastic location for nature lovers"
+      ],
+      "benefits": [
+        "Free Wi-Fi",
+        "On-site restaurant",
+        "Hiking trails nearby",
+        "Bicycle rental"
+      ],
+      "price": 250,
+      "sale_price": 220
+    },
+    {
+      "name": "Mock Up Design Hotel",
+      "property_type": "Design Hotel",
+      "location": "Los Angeles",
+      "rating": 4.5,
+      "star": 4,
+      "comments": [
+        "Beautiful hotel with unique design",
+        "Spacious rooms and great service",
+        "Fantastic location in the city"
+      ],
+      "benefits": [
+        "Free Wi-Fi",
+        "On-site bar",
+        "Fitness center",
+        "24-hour front desk service"
+      ],
+      "price": 300
+    },
+    {
+      "name": "Mock Up Eco Hotel",
+      "property_type": "Eco Hotel",
+      "location": "Los Angeles",
+      "rating": 4.0,
+      "star": 3,
+      "comments": [
+        "Beautiful eco-friendly hotel",
+        "Spacious rooms and great service",
+        "Fantastic location in the nature"
+      ],
+      "benefits": [
+        "Free Wi-Fi",
+        "On-site restaurant",
+        "Eco-friendly practices",
+        "Nature activities"
+      ],
+      "price": 250
+    }
+  ]
+}

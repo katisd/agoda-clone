@@ -1,37 +1,93 @@
-import { type FilterProps } from "../Search/types/FilterType";
+import { FilterRadioProps, type FilterProps } from "../Search/types/FilterType";
 import { z } from "zod";
 export const FilterList: FilterProps[] = [
   {
-    nameOfFilter: "rating",
-    choices: ["1", "2", "3", "4", "5"],
-  },
-  {
-    nameOfFilter: "Property_type",
-    choices: ["Entire apartment", "Serviced apartment", "Hotel", "Resort"],
-  },
-  {
-    nameOfFilter: "Sustainability",
-    choices: ["Green", "Sustainable", "Eco-friendly"],
-  },
-  {
-    nameOfFilter: "Distance_to_center",
+    nameOfFilter: "property_type",
     choices: [
-      "Inside city center",
-      "<2 km to center",
-      "2-5 km to center",
-      "4km",
-      "5km",
+      "Hotel",
+      "Resort",
+      "Inn",
+      "Luxury Hotel",
+      "Boutique Hotel",
+      "Budget Hotel",
+      "Family Hotel",
+      "Business Hotel",
+      "Beach Hotel",
+      "Countryside Hotel",
+      "Design Hotel",
+    ],
+  },
+  {
+    nameOfFilter: "benefits",
+    choices: [
+      "Free Wi-Fi",
+      "Free Breakfast",
+      "Fitness Center",
+      "Pool",
+      "Spa",
+      "On-site restaurant",
+      "Fitness center",
+      "Business center",
+      "Spa and fitness center",
+      "Shuttle service to nearby attractions",
+      "Continental breakfast",
+      "Bicycles available for rent",
+      "On-site spa and fitness center",
+      "Room service",
+      "Valet parking",
+      "On-site bar and restaurant",
+      "Pet-friendly",
+      "24-hour front desk service",
+      "On-site pool and playground",
+      "Family-friendly activities and entertainment",
+      "Babysitting service available",
+      "Business center with meeting rooms",
+      "On-site restaurant and bar",
+      "Beach chairs and umbrellas available",
+      "Water sports equipment rental",
+      "Hiking trails nearby",
+      "Bicycle rental",
+      "On-site bar",
+      "Eco-friendly practices",
+      "Nature activities",
     ],
   },
 ];
+
+export const FilterListRadio: FilterRadioProps[] = [
+  {
+    nameOfFilter: "star",
+    choices: [1, 2, 3, 4, 5],
+  },
+];
+
+export const FilterListChoseOne: FilterProps[] = [
+  {
+    nameOfFilter: "location",
+    choices: [
+      "New York",
+      "Loas Angeles",
+      "Chicago",
+      "Miami",
+      "Las Vegas",
+      "Los Angeles",
+      "San Francisco",
+      "Seattle",
+      "Boston",
+      "ALL",
+    ],
+  },
+];
+
 export const FilterValueSchema = z.object({
   name: z.string(),
   maxCost: z.number().min(0),
-  rating: z.array(z.number().min(0).max(5)),
-  Property_type: z.array(z.string()),
-  Sustainability: z.array(z.string()),
-  Distance_to_center: z.array(z.string()),
+  star: z.number().min(0).max(10),
+  location: z.string(),
+  property_type: z.array(z.string()),
+  benefits: z.array(z.string()),
 });
+
 export const menuList: string[] = [
   "Flight+Hotel",
   "Hotels&Home",
@@ -42,3 +98,4 @@ export const menuList: string[] = [
   "Airport Transfer",
   "Car Rental",
 ];
+export const hotelList: string[] = [];
