@@ -1,4 +1,4 @@
-import { FilterRadioProps, type FilterProps } from "../Search/types/FilterType";
+import type { FilterRadioProps, FilterProps } from "../Search/types/FilterType";
 import { z } from "zod";
 export const FilterList: FilterProps[] = [
   {
@@ -78,6 +78,8 @@ export const FilterListChoseOne: FilterProps[] = [
     ],
   },
 ];
+
+export const SortOption = ["Best Match", "Lowest price first", "Top review"];
 
 export const FilterValueSchema = z.object({
   name: z.string(),

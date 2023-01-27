@@ -10,7 +10,7 @@ function MenuList({ nMenu = 2 }: { nMenu?: number }) {
       ))}
       <li tabIndex={0}>
         <a>...</a>
-        <ul className="bg-base-100 p-2">
+        <ul className=" bg-base-100 p-2">
           {menuList.slice(nMenu).map((menu) => (
             <li key={menu}>
               <a>{menu}</a>

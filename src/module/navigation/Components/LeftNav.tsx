@@ -11,7 +11,6 @@ function LeftNav() {
       </a>
       {/* Link */}
       <div className="hidden flex-none sm:block">
-        {/* <ul className="menu menu-horizontal hidden px-1 sm:block lg:hidden"></ul> */}
         <span className="lg:hidden">{<MenuList />}</span>
         <span className="hidden lg:block">{<MenuList nMenu={6} />}</span>
       </div>

@@ -11,10 +11,14 @@ import CostRange from "./CostRange";
 import SearchArea from "./SearchArea";
 import SubFilter from "./SubFilter";
 
-const Filters = () => {
+const Filters: React.FC<{ classNameOptional?: string }> = ({
+  classNameOptional,
+}) => {
   const { register, watch, unregister } = useFormContext<FilterValueType>();
   return (
-    <div className="flex w-full flex-col  space-y-5">
+    <div
+      className={`${classNameOptional || ""} flex w-full flex-col  space-y-5`}
+    >
       <MapBg />
       {FilterListChoseOne.map(({ nameOfFilter, choices }) => (
         <select

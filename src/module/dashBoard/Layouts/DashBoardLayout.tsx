@@ -10,15 +10,11 @@ const DashBoardLayout: React.FC<Props> = ({ children }) => {
   return (
     <>
       {/* nav bar on top  */}
-      {/* <div> */}
       <TopNav />
-      {/* </div> */}
       {/* containner of content */}
-      <div className="container my-8 mx-auto grid grid-cols-4">
+      <div className="container my-8 mx-auto grid grid-cols-3 lg:grid-cols-4">
         {/* left side (filters) */}
-        <div>
-          <Filters />
-        </div>
+        <Filters classNameOptional="hidden lg:block" />
         {/* contents */}
         <div className="col-span-3">{children}</div>
       </div>

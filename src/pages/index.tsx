@@ -9,6 +9,7 @@ import FilterFunction from "../module/Search/utils/FilterFunction";
 import type { FilterValueType } from "./_app";
 import Sort from "../module/Search/components/Sort";
 import { SortFunction } from "../module/Search/utils/SortFunction";
+import Filters from "../module/Search/components/Filters";
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -31,17 +32,34 @@ const Home: NextPage = () => {
   const [error, setError] = useState(false);
   const { watch } = useFormContext<FilterValueType>();
   return (
-    <DashBoardLayout>
-      <div className="m-7 space-y-3">
-        <Sort />
-        {data?.hotels
-          ?.filter((hotel) => FilterFunction(hotel, watch()))
-          .sort((a, b) => SortFunction(a, b, watch().sort))
-          .map((hotel, ind) => (
-            <HoTelSection prop={hotel} key={hotel.name + ind.toString()} />
-          ))}
+    <div className="drawer drawer-end">
+      <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+      <div className="drawer-content">
+        <DashBoardLayout>
+          <div className="m-7 space-y-3">
+            <label
+              htmlFor="my-drawer-4"
+              className="btn-primary btn drawer-button w-full md:collapse"
+            >
+              Add Filters
+            </label>
+            <Sort />
+            {data?.hotels
+              ?.filter((hotel) => FilterFunction(hotel, watch()))
+              .sort((a, b) => SortFunction(a, b, watch().sort))
+              .map((hotel, ind) => (
+                <HoTelSection prop={hotel} key={hotel.name + ind.toString()} />
+              ))}
+          </div>
+        </DashBoardLayout>
       </div>
-    </DashBoardLayout>
+      <div className="drawer-side">
+        <label htmlFor="my-drawer-4" className="drawer-overlay"></label>
+        <ul className="menu w-80 bg-base-100 p-4 text-base-content">
+          <Filters />
+        </ul>
+      </div>
+    </div>
   );
 };
 export default Home;

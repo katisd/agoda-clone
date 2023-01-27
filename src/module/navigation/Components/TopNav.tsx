@@ -4,7 +4,7 @@ import RightNav from "./RightNav";
 
 function NavBar() {
   return (
-    <div className="h-14 w-full bg-base-200">
+    <div className=" h-14 w-full bg-base-200">
       <div className="navbar flex justify-between bg-base-100">
         {/* Left */}
         <LeftNav />

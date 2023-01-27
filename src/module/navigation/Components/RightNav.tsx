@@ -4,7 +4,7 @@ import SigninAndConfigButton from "./SigninAndConfigButton";
 
 function RightNav() {
   return (
-    <div>
+    <div className="space-x-3">
       <SigninAndConfigButton />
     </div>
   );
