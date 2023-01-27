@@ -8,8 +8,13 @@ const BenefitsBadge: React.FC<{ benefits: string[] | undefined }> = ({
       {benefits?.map((benefit, i) => {
         if (i < 2) {
           return (
-            <div key={i} className="badge-primary badge badge-sm p-3">
-              {benefit}
+            <div className="tooltip tooltip-primary" data-tip={benefit} key={i}>
+              <div
+                key={i}
+                className="badge-primary badge badge-sm  w-16 overflow-hidden p-3"
+              >
+                <p className="truncate">{benefit}</p>
+              </div>
             </div>
           );
         } else if (i == 2) {

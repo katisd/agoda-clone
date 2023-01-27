@@ -1,8 +1,7 @@
 import React from "react";
 import { useFormContext } from "react-hook-form";
 import { FilterValueType } from "../../../pages/_app";
-
-const SortOption = ["Best Match", "Lowest price first", "Top review"];
+import { SortOption } from "../../assets/staticObject";
 
 const Sort = () => {
   const { register } = useFormContext<FilterValueType>();

@@ -99,4 +99,6 @@ export const menuList: string[] = [
   "Airport Transfer",
   "Car Rental",
 ];
+
+export const SortOption = ["Best Match", "Lowest price first", "Top review"];
 export const hotelList: string[] = [];

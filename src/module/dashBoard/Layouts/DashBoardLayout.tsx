@@ -4,9 +4,10 @@ import Filters from "../../Search/components/Filters";
 
 type Props = {
   children: React.ReactNode;
+  Filter: React.ReactNode;
 };
 
-const DashBoardLayout: React.FC<Props> = ({ children }) => {
+const DashBoardLayout: React.FC<Props> = ({ children, Filter }) => {
   return (
     <>
       {/* nav bar on top  */}
@@ -14,13 +15,17 @@ const DashBoardLayout: React.FC<Props> = ({ children }) => {
       <TopNav />
       {/* </div> */}
       {/* containner of content */}
-      <div className="container my-8 mx-auto grid grid-cols-4">
+      <div className="container my-8 mx-auto flex flex-col lg:grid lg:grid-cols-4">
         {/* left side (filters) */}
-        <div>
+        <div className="collapse mx-3 mb-5">
           <Filters />
         </div>
-        {/* contents */}
-        <div className="col-span-3">{children}</div>
+        <div className="md:col-span-3">
+          <div className="mx-7 space-y-3">
+            {children}
+            {/* contents */}
+          </div>
+        </div>
       </div>
     </>
   );

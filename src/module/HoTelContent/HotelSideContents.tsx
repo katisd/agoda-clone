@@ -7,8 +7,8 @@ export const HotelSideContents: React.FC<Hotel> = ({
   rating,
 }) => {
   return (
-    <div className="flex-cols flex">
-      <div className="divider divider-horizontal" />
+    <div className="md:flex-cols flex">
+      <div className="divider divider-horizontal invisible md:visible" />
       <div className="flex flex-col items-end space-y-3">
         {/* rating */}
         <div className="flex h-10 w-10 place-content-center items-center rounded-t-full rounded-br-full bg-secondary">

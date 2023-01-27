@@ -1,4 +1,4 @@
-import { FilterValueType } from "../../../pages/_app";
+import type { FilterValueType } from "../../../pages/_app";
 
 export type FilterProps = {
   nameOfFilter: keyof FilterValueType;

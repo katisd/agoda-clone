@@ -9,6 +9,7 @@ import FilterFunction from "../module/Search/utils/FilterFunction";
 import type { FilterValueType } from "./_app";
 import Sort from "../module/Search/components/Sort";
 import { SortFunction } from "../module/Search/utils/SortFunction";
+import Filters from "../module/Search/components/Filters";
 
 const Home: NextPage = () => {
   useEffect(() => {
@@ -31,16 +32,14 @@ const Home: NextPage = () => {
   const [error, setError] = useState(false);
   const { watch } = useFormContext<FilterValueType>();
   return (
-    <DashBoardLayout>
-      <div className="m-7 space-y-3">
-        <Sort />
-        {data?.hotels
-          ?.filter((hotel) => FilterFunction(hotel, watch()))
-          .sort((a, b) => SortFunction(a, b, watch().sort))
-          .map((hotel, ind) => (
-            <HoTelSection prop={hotel} key={hotel.name + ind.toString()} />
-          ))}
-      </div>
+    <DashBoardLayout Filter={<Filters />}>
+      <Sort />
+      {data?.hotels
+        ?.filter((hotel) => FilterFunction(hotel, watch()))
+        .sort((a, b) => SortFunction(a, b, watch().sort))
+        .map((hotel, ind) => (
+          <HoTelSection prop={hotel} key={hotel.name + ind.toString()} />
+        ))}
     </DashBoardLayout>
   );
 };
