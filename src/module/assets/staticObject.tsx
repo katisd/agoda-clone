@@ -86,6 +86,7 @@ export const FilterValueSchema = z.object({
   location: z.string(),
   property_type: z.array(z.string()),
   benefits: z.array(z.string()),
+  sort: z.enum(["Lowest price first", "Top review", "Distance", "Best match"]),
 });
 
 export const menuList: string[] = [

@@ -15,6 +15,7 @@ const defaultValues: FilterValueType = {
   location: "location",
   star: 0,
   benefits: [],
+  sort: "Best match",
 };
 const MyApp: AppType = ({ Component, pageProps }) => {
   const methods = useForm<FilterValueType>({
